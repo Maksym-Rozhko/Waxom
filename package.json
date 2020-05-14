@@ -1,0 +1,16 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "stylelint css/style.css",
+    "start": "gulp html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "stylelint": "13.2.0",
+    "stylelint-config-standard": "20.0.0"
+  }
+}

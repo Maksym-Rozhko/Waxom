@@ -1,0 +1,1396 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  background-size: cover;
+  font-family: 'Montserrat', 'Raleway', sans-serif;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.header {
+  position: relative;
+  background-image: url('./img/Logo/bg-header.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.47);
+}
+
+.wrapper {
+  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-inner {
+  margin-bottom: 285px;
+}
+
+/* Style for "logos" */
+.logo {
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+
+/* Style for "Navigation" */
+.navigation {
+  float: right;
+  font-size: 0;
+  margin-top: 10px;
+}
+
+.navigation-link {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.navigation-link:nth-child(8) {
+  margin-right: 60px;
+}
+
+.navigation-link:last-child {
+  margin-right: 0;
+}
+
+.nav-active:hover {
+  color: #c7b299;
+}
+
+.change-cl {
+  background: url('./img/Logo/icon-cleaning.png');
+  display: inline-block;
+  width: 18px;
+  height: 24px;
+}
+
+.change-cl:hover {
+  background: url('./img/Logo/icon-cleaning-hov.png');
+}
+
+.change-sr {
+  background: url('./img/Logo/icon-search.png');
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.change-sr:hover {
+  background: url('./img/Logo/icon-search-hov.png');
+}
+
+.header-title {
+  margin-left: auto;
+  margin-right: auto;
+  width: 590px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Style for "subtitle" */
+.subtitle {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* Style for "suptitle" */
+.suptitle {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-family: "Raleway - Extra Bold", sans-serif;
+  font-size: 52px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Style for "Some-text" */
+.some-text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  width: 600px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Стили для кнопки */
+.container-link {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 315px;
+}
+
+.link {
+  display: inline-block;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  color: #fff;
+  font-family: "Raleway - Extra Bold", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  background-color: #998675;
+  box-shadow: inset 0 -3px 0 #736357;
+  transition: 0.5s;
+}
+
+.link:hover {
+  background-color: #111;
+}
+
+/* Стили для радио слайдера */
+.radio-wrapper {
+  text-align: center;
+}
+
+.radio {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.radio-input {
+  position: absolute;
+  display: none;
+}
+
+.radio-label {
+  padding-left: 20px;
+  font-size: 16px;
+  color: #444;
+  cursor: pointer;
+}
+
+.radio-label::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #d3c1ad;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: border 0.1s linear;
+}
+
+.radio-label::after {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  background-color: #fff;
+  opacity: 0.5;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 2;
+  transition: opacity 0.1s linear;
+}
+
+.radio-input:checked + .radio-label::before {
+  opacity: 1;
+}
+
+.radio-input:checked + .radio-label::after {
+  opacity: -1;
+}
+
+.radio-off {
+  background: url('./img/Logo/btw-off.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  width: 11px;
+  height: 11px;
+  border: none;
+  margin-left: 5px;
+}
+
+.radio-off:first-child {
+  margin-left: 0;
+}
+
+.button-on {
+  width: 17px;
+  height: 17px;
+  border: 2px solid #d3c1ad;
+  border-radius: 50%;
+  background: none;
+}
+
+/* Стили для кнопок слайдера */
+.arrow {
+  width: 40px;
+  height: 73px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+
+.left {
+  background: url('./img/Logo/left.png');
+  left: 150px;
+}
+
+.right {
+  background: url('./img/Logo/right.png');
+  right: 150px;
+}
+
+.left:hover {
+  background: url('./img/Logo/left-hov.png');
+}
+
+.right:hover {
+  background: url('./img/Logo/right-hov.png');
+}
+
+/* Стили для 'Services' */
+.services {
+  padding-top: 90px;
+  padding-bottom: 80px;
+}
+
+.card-img {
+  width: 49px;
+  height: 49px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-item {
+  width: 270px;
+  float: left;
+  color: #555;
+  font-size: 22px;
+  text-align: center;
+  margin-right: 35px;
+  transition: 0.5s;
+}
+
+.card-item:last-child {
+  margin-right: 0;
+}
+
+.card-name {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  position: relative;
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  min-height: 100px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.card-text::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f1eee9;
+}
+
+.card-text:hover::after {
+  background-color: #c7b299;
+}
+
+.web {
+  background: url('./img/about/icon-web.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.card-item:hover .web {
+  background: url('./img/about/icon-web-hov.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.development {
+  background: url('./img/about/icon-development.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.card-item:hover .development {
+  background: url('./img/about/icon-development-hov.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.customization {
+  background: url('./img/about/icon-customization.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.card-item:hover .customization {
+  background: url('./img/about/icon-customization-hov.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.marketing {
+  background: url('./img/about/icon-marketing.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.card-item:hover .marketing {
+  background: url('./img/about/icon-marketing-hov.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-item:hover {
+  color: #c7b299;
+}
+
+/* Стили для 'Portfolio' */
+.portfolio {
+  padding-top: 80px;
+  background-color: #fbfaf8;
+}
+
+.info-title {
+  color: #555;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.info-text {
+  width: 760px;
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-wrapper {
+  font-size: 0;
+}
+
+/* Стили для 'Text Boxes' */
+.bg-boxes {
+  background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-text {
+  float: left;
+}
+
+.boxes-name {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+.boxes-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #615855;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.active-color {
+  color: #c7b299;
+}
+
+.boxes-link {
+  float: right;
+  padding-top: 17px;
+}
+
+.b-link {
+  padding: 16px 32px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  font-family: "Raleway - Extra Bold", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  text-transform: uppercase;
+  background-color: #998675;
+  box-shadow: inset 0 -3px 0 #736357;
+  transition: 0.5s;
+}
+
+.b-link:hover {
+  background-color: #111;
+}
+
+.hov-color:hover {
+  color: #c7b299;
+  cursor: pointer;
+}
+
+/* Стили для 'Latest Projects' */
+.projects {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.intro-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #555;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.intro-text {
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: center;
+  width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons-container {
+  text-align: center;
+  font-size: 0;
+  margin-bottom: 40px;
+}
+
+.btn-item {
+  padding: 8px 20px;
+  margin-right: 10px;
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  border-radius: 3px;
+  border: 1px solid #ebebeb;
+  transition: 0.5s;
+}
+
+.btn-item-active {
+  background-color: #998675;
+  color: #fff;
+}
+
+.btn-item:last-child {
+  margin-right: 0;
+}
+
+.btn-item:hover {
+  background-color: #998675;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Стили для 'Card-items' */
+.card-items {
+  float: left;
+  position: relative;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.item-photo {
+  font-size: 0;
+  position: relative;
+}
+
+.item-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding-top: 200px;
+  display: none;
+  transition: 0.5s;
+}
+
+.card-items:hover .item-effect {
+  display: block;
+}
+
+.item-text::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 92px;
+  background: url('./img/features/arrow-projects.png');
+  width: 30px;
+  height: 10px;
+  transition: 0.5s;
+}
+
+.card-items:hover .item-text::after {
+  background: url('./img/features/arrow-projets-hov.png');
+}
+
+.item-text {
+  background-color: #fbfaf8;
+  transition: 0.5s;
+}
+
+.card-items:hover .item-text {
+  background-color: #362f2d;
+}
+
+.subtext-upper {
+  color: #c7b299;
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding-top: 20px;
+  transition: 0.5s;
+  padding-left: 30px;
+}
+
+.card-items:hover .subtext-upper {
+  color: #d1d1d1;
+}
+
+.subtext-lower {
+  color: #d1d1d1;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 25px;
+  transition: 0.5s;
+  padding-left: 30px;
+}
+
+.card-items:hover .subtext-lower {
+  color: #c7b299;
+}
+
+.link-tools {
+  display: inline-block;
+}
+
+.link-items {
+  width: 26px;
+  height: 25px;
+  display: inline-block;
+  transition: 0.5s;
+  position: relative;
+  bottom: 105px;
+}
+
+.chain {
+  background-image: url('./img/features/link.png');
+  right: 50px;
+}
+
+.lupa {
+  background-image: url('./img/features/lupa.png');
+  left: 50%;
+}
+
+.card-items:hover .chain {
+  background-image: url('./img/features/link-hov.png');
+}
+
+.lupa:hover {
+  background-image: url('./img/features/lupa-hov.png');
+}
+
+.button-link {
+  margin-bottom: 0;
+}
+
+/* Стили для 'Video-box' */
+.video-box {
+  background: url('./img/video/img-video.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 190px;
+  padding-bottom: 210px;
+}
+
+.video-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(17, 17, 17, 0.5);
+}
+
+.video-text {
+  text-align: center;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+}
+
+.video-name {
+  position: relative;
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 20px;
+  z-index: 10;
+}
+
+.video-description {
+  position: relative;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  z-index: 10;
+}
+
+.video-time {
+  position: relative;
+  color: #c7b299;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  z-index: 10;
+}
+
+.btn-icon-play {
+  width: 70px;
+  height: 70px;
+  background: url('./img/video/icon-play.png');
+  border: none;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.video-text::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Стили для Секции 'Mobile-devices' */
+.mobile-devices {
+  background-image: url('./img/devices/bg-mobile.png');
+  padding-top: 80px;
+}
+
+.img-boxes {
+  float: left;
+  margin-left: 40px;
+  font-size: 0;
+}
+
+.devices {
+  float: left;
+  width: 720px;
+}
+
+.devices-title {
+  color: #555;
+  font-family: "Raleway - Semi Bold", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  margin-top: 115px;
+}
+
+.devices-text {
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.devices-list {
+  position: relative;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 130px;
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+.icon-list::before {
+  content: "";
+  width: 21px;
+  height: 21px;
+  background: url('./img/devices/icon-list-1.png');
+  position: absolute;
+  left: 80px;
+  margin-top: 5px;
+}
+
+/* Стили для 'Indicators' */
+.indicators {
+  background-color: #f4f5f8;
+  background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+  min-height: 300px;
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+.informations {
+  display: inline-block;
+  text-align: center;
+  padding-top: 75px;
+  padding-bottom: 40px;
+}
+
+.counter {
+  position: relative;
+  color: #fff;
+  font-family: "Montserrat - Ultra Light", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 36px;
+  display: block;
+}
+
+.indicators-name {
+  position: relative;
+  color: #c7b299;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+.indicators-name::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  bottom: -30px;
+  left: 50px;
+}
+
+.i-icon::before {
+  content: "";
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  bottom: 105px;
+  left: 45px;
+  transition: 0.5s;
+}
+
+.box-clients {
+  margin-left: 120px;
+  margin-right: 75px;
+}
+
+.i-clients::before {
+  background: url('./img/information/icon-clients-hov.png');
+}
+
+.box-cups {
+  margin-right: 80px;
+}
+
+.i-cups::before {
+  background: url('./img/information/icon-cups-hov.png');
+  width: 48px;
+  left: 43px;
+}
+
+.box-blog {
+  margin-right: 100px;
+}
+
+.i-blog::before {
+  background: url('./img/information/icon-posts-hov.png');
+  left: 35px;
+}
+
+.i-blog::after {
+  left: 40px;
+}
+
+.box-likes {
+  margin-right: 110px;
+}
+
+.i-likes::before {
+  background: url('./img/information/icon-likes-hov.png');
+  left: 20px;
+}
+
+.i-likes::after {
+  left: 25px;
+}
+
+.i-launch::before {
+  background: url('./img/information/icon-latched-hov.png');
+  width: 54px;
+  left: 30px;
+}
+
+.i-launch::after {
+  left: 40px;
+}
+
+/* Стили для 'Recents-Posts' */
+.recents-post {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.inner-posts {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+.inner-title {
+  color: #555;
+  font-family: "Raleway - Semi Bold", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.inner-text {
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Стили для 'Posts BOX' */
+.big-box {
+  margin-bottom: 40px;
+}
+
+.posts-box {
+  float: left;
+  margin-left: 30px;
+  transition: 1s;
+}
+
+.img-post {
+  font-size: 0;
+  position: relative;
+  width: 370px;
+}
+
+.container-date {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.img-post-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 220px;
+  background-color: rgba(17, 17, 17, 0.7);
+  display: none;
+  transition: 1s;
+}
+
+.posts-box:hover .img-post-shadow {
+  display: block;
+}
+
+.post-text {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  max-width: 300px;
+}
+
+.post-title {
+  color: #555;
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+  transition: 1s;
+}
+
+.post-subtitle {
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.post-link {
+  position: relative;
+  text-decoration: none;
+  color: #c7b299;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.post-link::after {
+  content: "";
+  width: 5px;
+  height: 8px;
+  background: url('./img/posts/arrow-posts.png');
+  position: absolute;
+  top: 54%;
+  transform: translateY(-50%);
+  right: -10px;
+}
+
+.posts-box:hover {
+  background-color: #362f2d;
+  color: #c7b299;
+}
+
+.posts-box:hover .post-title {
+  color: #c7b299;
+}
+
+.posts-box:hover .post-subtitle {
+  color: #fff;
+}
+
+.inner-label {
+  padding-left: 25px;
+}
+
+.inner-label::before {
+  top: -40px;
+}
+
+.inner-label::after {
+  opacity: 0.3;
+  top: -36px;
+}
+
+.posts-box:hover .radio-wr-inner {
+  opacity: 0;
+}
+
+.day {
+  width: 50px;
+  height: 35px;
+  border-radius: 3px 3px 0 0;
+  background-color: #363636;
+  transition: 1s;
+}
+
+.posts-day {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 20px;
+  position: relative;
+  top: 10px;
+  left: 11px;
+}
+
+.posts-month {
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  position: relative;
+  top: 3px;
+  left: 14px;
+}
+
+.month {
+  width: 50px;
+  height: 25px;
+  border-radius: 0 0 3px 3px;
+  background-color: #252525;
+  transition: 1s;
+}
+
+.posts-box:hover .day {
+  background-color: #c7b299;
+  z-index: 10;
+}
+
+.posts-box:hover .month {
+  background-color: #a48d72;
+  z-index: 10;
+}
+
+.button-position {
+  text-align: center;
+}
+
+.btn-posts {
+  width: 22px;
+  height: 22px;
+  border: none;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-posts:last-child {
+  margin-right: 0;
+}
+
+.left-posts {
+  background: url('./img/posts/left-btn-posts.png');
+}
+
+.right-posts {
+  background: url('./img/posts/right-btn-post-hov.png');
+}
+
+/* Стили для 'Brands' */
+.brands {
+  background: url('./img/brends/bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
+.brands::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.brands-box {
+  position: relative;
+}
+
+.brands-logo {
+  float: left;
+  position: relative;
+  z-index: 10;
+  margin-left: 90px;
+  top: 0;
+}
+
+.brands-logo:first-child {
+  margin-left: 30px;
+}
+
+.brands-logo:nth-child(odd) {
+  top: 30px;
+}
+
+/* Стили для 'OVER-Footer' сайта */
+.over-footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #191919;
+}
+
+.about-site {
+  float: left;
+  margin-right: 30px;
+}
+
+.about-site-subtext {
+  color: #555;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  max-width: 260px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  color: #d1d1d1;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.read-more::after {
+  background: url('./img/contacts/arrow.png');
+}
+
+.footer-recents-posts {
+  float: left;
+  margin-right: 40px;
+}
+
+.footer-recents-posts:last-child {
+  margin-right: 0;
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-family: Raleway, sans-serif;
+}
+
+.posts-date-link {
+  max-width: 270px;
+  position: relative;
+}
+
+.separator {
+  margin-bottom: 40px;
+}
+
+.date-time {
+  color: #363636;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20px;
+  transition: 0.5s;
+}
+
+.date-link {
+  display: block;
+  color: #555;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-decoration: none;
+  margin-top: 5px;
+  transition: 0.5s;
+}
+
+.separator::after {
+  content: "";
+  position: absolute;
+  width: 270px;
+  height: 1px;
+  background-color: #252525;
+  bottom: -24px;
+}
+
+.posts-date-link:hover .date-time {
+  color: #fff;
+}
+
+.posts-date-link:hover .date-link {
+  color: #c7b299;
+}
+
+.short-link {
+  color: #00bff3;
+  text-decoration: none;
+}
+
+.posts-subtext {
+  display: inline;
+  color: #555;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.time-later {
+  display: block;
+  color: #363636;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.site-link {
+  color: #959595;
+}
+
+.widget-img {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.widget-img:last-child {
+  margin-right: 0;
+}
+
+/* Стили для 'Footer' сайта */
+.footer {
+  padding-top: 45px;
+  padding-bottom: 50px;
+  background-color: #111;
+}
+
+.copyright {
+  float: left;
+}
+
+.privacy {
+  color: #555;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.link-waxom {
+  color: #959595;
+  text-decoration: none;
+}
+
+.stick {
+  color: #252525;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.link-faq {
+  color: #c7b299;
+  text-decoration: none;
+}
+
+.designer-avtor {
+  float: right;
+}
+
+.designer {
+  color: #555;
+}
+
+.link-designer {
+  color: #959595;
+  text-decoration: none;
+}
