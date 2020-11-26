@@ -13,52 +13,63 @@
     </title>
 </head>
 <body>
-    <header class="header"><!-- Section Home Start -->
+    <!-- overflow for burger {click active} -->
+    <header class="header "><!-- Section Home Start -->
         <div class="wrapper">
-            <div class="header-inner clearfix">
-                <a href="#" target="_blank" class="logo">
-                    <img src="./css/img/Logo/Logo-waxom.png" alt="Logo Waxom">
-                </a>
-                <nav class="navigation">
-                    <a href="#Home" class="navigation-link nav-active">Home</a>
-                    <a href="#About Us" class="navigation-link nav-active">About Us</a>
-                    <a href="#Portfolio" class="navigation-link nav-active">Portfolio</a>
-                    <a href="#Features" class="navigation-link nav-active">Features</a>
-                    <a href="#Blog" class="navigation-link nav-active">Blog</a>
-                    <a href="#Pricing" class="navigation-link nav-active">Pricing</a>
-                    <a href="#Shortcodes" class="navigation-link nav-active">Shortcodes</a>
-                    <a href="#Contacts" class="navigation-link nav-active">Contacts</a>
-                    <a href="#" class="navigation-link change-cl"></a>
-                    <a href="#" class="navigation-link change-sr"></a>
-                </nav>
-            </div>
-            <div class="header-title">
-                <h3 class="subtitle">
-                    Unique and Modern Design
-                </h3>
-                <h2 class="suptitle">
-                    Portfolio PSD Template
-                </h2>
-                <p class="some-text">
-                    Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet 
-                    doming id quod mazim placerat facer possim assum.
-                </p>
-            </div>
-            <div class="container-link">
-                <a class="link" href="#">Get Started</a>
-            </div>
-            <div class="radio-wrapper">
-                <button type="button" class="radio-off"></button>
-                <button type="button" class="radio-off button-on"></button>
-                <button type="button" class="radio-off"></button>
-                <button type="button" class="radio-off"></button>
-                <button type="button" class="radio-off"></button>
+            <div class="header-box">
+                <div class="header-inner">
+                    <a id="home" href="#" class="logo">
+                        <img src="./css/img/Logo/Logo-waxom.png" alt="Logo Waxom">
+                    </a>
+                    <div class="header-burger">
+                        <div class="burger-menu">
+                            <span class="burger-menu-line"></span>
+                            <span class="burger-menu-line"></span>
+                            <span class="burger-menu-line"></span>
+                        </div>
+                    </div>
+                    <!-- nav-menu--active for burger {click active} -->
+                    <nav class="navigation ">
+                        <a href="#home" class="navigation-link nav-link--active">Home</a>
+                        <a href="#about-us" class="navigation-link">About Us</a>
+                        <a href="#portfolio" class="navigation-link">Portfolio</a>
+                        <a href="#features" class="navigation-link">Features</a>
+                        <a href="#blog" class="navigation-link">Blog</a>
+                        <a href="#pricing" class="navigation-link">Pricing</a>
+                        <a href="#shortcodes" class="navigation-link">Shortcodes</a>
+                        <a href="#contacts" class="navigation-link">Contacts</a>
+                        <a href="#" class="navigation-link change-cl change-icon"></a>
+                        <a href="#" class="navigation-link change-sr change-icon"></a>
+                    </nav>
+                </div>
+                <div class="header-title">
+                    <h3 class="subtitle">
+                        Unique and Modern Design
+                    </h3>
+                    <h2 class="suptitle">
+                        Portfolio PSD Template
+                    </h2>
+                    <p class="some-text">
+                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet 
+                        doming id quod mazim placerat facer possim assum.
+                    </p>
+                    <div class="container-link">
+                        <a class="link" href="#">Get Started</a>
+                    </div>
+                </div>
+                <div class="radio-wrapper">
+                    <button type="button" class="radio-off"></button>
+                    <button type="button" class="radio-off button-on"></button>
+                    <button type="button" class="radio-off"></button>
+                    <button type="button" class="radio-off"></button>
+                    <button type="button" class="radio-off"></button>
+                </div>
             </div>
         </div>
         <button type="button" class="arrow left"></button>
         <button type="button" class="arrow right"></button>
     </header><!-- Section Home End -->
-    <section class="services"><!-- Section services Stast -->
+    <section id="about-us" class="services"><!-- Section services Stast -->
         <div class="wrapper">
             <div class="card clearfix">
                 <div class="card-item">
@@ -100,7 +111,7 @@
             </div>
         </div>
     </section><!-- Section Services End -->
-    <section class="portfolio"><!-- Section Portfolio Stars -->
+    <section id="portfolio" class="portfolio"><!-- Section Portfolio Stars -->
         <div class="wrapper">
             <h2 class="info-title">
                 Waxom is Realization of your Ideas.
@@ -131,7 +142,7 @@
             </div>
         </div>
     </section><!-- Section Portfolio End -->
-    <section class="projects"><!-- Section Projects Start -->
+    <section id="features" class="projects"><!-- Section Projects Start -->
         <div class="wrapper">
             <h2 class="intro-title">
                 Our Latest Projects.
@@ -267,7 +278,7 @@
             </div>
         </div>
     </section><!-- Section Projects End -->
-    <section class="video-box"><!-- Section Video-box Start -->
+    <section id="blog" class="video-box"><!-- Section Video-box Start -->
        <div class="wrapper">
         <div class="video-text">
             <button class="btn-icon-play" type="button"></button>
@@ -328,7 +339,7 @@
             </div>
         </div>
     </section><!-- Section Indicators end -->
-    <section class="recents-post"><!-- Section Recents Posts Stars -->
+    <section id="pricing" class="recents-post"><!-- Section Recents Posts Stars -->
         <div class="wrapper">
             <div class="inner-posts">
                 <h4 class="inner-title">
@@ -493,7 +504,7 @@
             </div>
         </div>
     </section><!-- Section Recents Posts End -->
-    <section class="brands"><!-- Section Brands Start -->
+    <section id="shortcodes" class="brands"><!-- Section Brands Start -->
         <div class="wrapper">
            <div class="brands-box clearfix">
                 <div class="brands-logo">
@@ -608,7 +619,7 @@
             </div>
         </div>
     </section><!-- Section OVER-Footer Start -->
-    <footer class="footer">
+    <footer id="contacts" class="footer">
         <div class="wrapper">
             <div class="infotmation-site clearfix">
                 <div class="copyright">
