@@ -4,44 +4,46 @@
     <meta charset="UTF-8">
     <meta name="discription" content="Free Web Tutorials">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <link rel="icon" type="image/png" href="./css/img/Logo/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normolize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" defer></script>
     <title>
         Waxom
     </title>
 </head>
 <body>
     <!-- overflow for burger {click active} -->
-    <header class="header "><!-- Section Home Start -->
+    <div class="header-inner">
+        <a id="home" href="#" class="logo">
+            <img src="./css/img/Logo/Logo-waxom.png" alt="Logo Waxom">
+        </a>
+        <div class="header-burger">
+            <div class="burger-menu">
+                <span class="burger-menu-line"></span>
+                <span class="burger-menu-line"></span>
+                <span class="burger-menu-line"></span>
+            </div>
+        </div>
+        <!-- nav-menu--active for burger {click active} -->
+        <nav class="navigation ">
+            <a href="#home" class="navigation-link nav-link--active">Home</a>
+            <a href="#about-us" class="navigation-link">About Us</a>
+            <a href="#portfolio" class="navigation-link">Portfolio</a>
+            <a href="#features" class="navigation-link">Features</a>
+            <a href="#blog" class="navigation-link">Blog</a>
+            <a href="#pricing" class="navigation-link">Pricing</a>
+            <a href="#shortcodes" class="navigation-link">Shortcodes</a>
+            <a href="#contacts" class="navigation-link">Contacts</a>
+            <a href="#" class="change-cl change-icon"></a>
+            <a href="#" class="change-sr change-icon"></a>
+        </nav>
+    </div>
+    <header class="header"><!-- Section Home Start -->
         <div class="wrapper">
             <div class="header-box">
-                <div class="header-inner">
-                    <a id="home" href="#" class="logo">
-                        <img src="./css/img/Logo/Logo-waxom.png" alt="Logo Waxom">
-                    </a>
-                    <div class="header-burger">
-                        <div class="burger-menu">
-                            <span class="burger-menu-line"></span>
-                            <span class="burger-menu-line"></span>
-                            <span class="burger-menu-line"></span>
-                        </div>
-                    </div>
-                    <!-- nav-menu--active for burger {click active} -->
-                    <nav class="navigation ">
-                        <a href="#home" class="navigation-link nav-link--active">Home</a>
-                        <a href="#about-us" class="navigation-link">About Us</a>
-                        <a href="#portfolio" class="navigation-link">Portfolio</a>
-                        <a href="#features" class="navigation-link">Features</a>
-                        <a href="#blog" class="navigation-link">Blog</a>
-                        <a href="#pricing" class="navigation-link">Pricing</a>
-                        <a href="#shortcodes" class="navigation-link">Shortcodes</a>
-                        <a href="#contacts" class="navigation-link">Contacts</a>
-                        <a href="#" class="navigation-link change-cl change-icon"></a>
-                        <a href="#" class="navigation-link change-sr change-icon"></a>
-                    </nav>
-                </div>
                 <div class="header-title">
                     <h3 class="subtitle">
                         Unique and Modern Design
