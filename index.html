@@ -15,20 +15,18 @@
     </title>
 </head>
 <body>
-    <!-- overflow for burger {click active} -->
     <div class="header-inner">
-        <a id="home" href="#" class="logo">
+        <a href="#home" class="navigation-link logo">
             <img src="./css/img/Logo/Logo-waxom.png" alt="Logo Waxom">
         </a>
         <div class="header-burger">
-            <div class="burger-menu">
+            <div id="burgerToogle" class="burger-menu">
                 <span class="burger-menu-line"></span>
                 <span class="burger-menu-line"></span>
                 <span class="burger-menu-line"></span>
             </div>
         </div>
-        <!-- nav-menu--active for burger {click active} -->
-        <nav class="navigation ">
+        <nav class="navigation">
             <a href="#home" class="navigation-link nav-link--active">Home</a>
             <a href="#about-us" class="navigation-link">About Us</a>
             <a href="#portfolio" class="navigation-link">Portfolio</a>
@@ -41,7 +39,8 @@
             <a href="#" class="change-sr change-icon"></a>
         </nav>
     </div>
-    <header class="header"><!-- Section Home Start -->
+    <header id="home" class="header"><!-- Section Home Start -->
+        <img id="sliderImg" src="./css/img/Logo/bg-header.png" alt="img">
         <div class="wrapper">
             <div class="header-box">
                 <div class="header-title">
@@ -61,7 +60,7 @@
                 </div>
                 <div class="radio-wrapper">
                     <button type="button" class="radio-off"></button>
-                    <button type="button" class="radio-off button-on"></button>
+                    <button type="button" class="radio-off"></button>
                     <button type="button" class="radio-off"></button>
                     <button type="button" class="radio-off"></button>
                     <button type="button" class="radio-off"></button>
