@@ -25,11 +25,11 @@ body {
 }
 
 .header {
-  position: relative;
   /* background-image: url('./img/Logo/bg-header.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; */
+  position: relative;
   padding-top: 40px;
   padding-bottom: 40px;
 }

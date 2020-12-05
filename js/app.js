@@ -10,7 +10,7 @@ for (let anchor of anchors) {
   const blockID = anchor.getAttribute('href');
   anchor.addEventListener('click', (e) => {
     e.preventDefault();
-    
+   
     document.querySelector(blockID).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
@@ -56,41 +56,78 @@ const imgItems = [
   './css/img/video/img-video.png'
 ];
 
+const dotBtns = () => {
+  radioBtns.forEach((selected) => {
+    if(slideImg === 0 && selected.id === 'dot1' || slideImg === 1 && selected.id === 'dot2' ||
+    slideImg === 2 && selected.id === 'dot3' || slideImg === 3 && selected.id === 'dot4' ||
+    slideImg === 4 && selected.id === 'dot5') {
+      selected.classList.add('button-on');
+    } else {
+      selected.classList.remove('button-on');
+    }
+  });
+} 
+
 const nextSlide = () => {
   sliderImg.style.display = 'block';
-    radioBtns[1].classList.add('button-on');
   if (slideImg < (imgItems.length - 1)) {
     slideImg++;
+    dotBtns();
   } else {
     slideImg = 0;
+    dotBtns();
   }
   sliderImg.src = `${imgItems[slideImg]}`;
-
-  // const currDot = [slideImg];
-  // console.log(currDot);
 }
 
 const prevSlide = () => {
   if (slideImg > 0) {
     slideImg--;
+    dotBtns();
   } else {
     slideImg = imgItems.length - 1;
+    dotBtns();
   }
   sliderImg.src = `${imgItems[slideImg]}`;  
 }
 
 radioBtns.forEach((radioSelected) => {
-  radioSelected.addEventListener('click',function() {
-     if (radioSelected.classList.value === 'button-on' || radioSelected.classList.value !== 'button-on') {
+  radioBtns[1].classList.add('button-on');
+  radioSelected.addEventListener('click', function() {
+    dotsChange(radioSelected);
+      if (radioSelected.classList.value === 'button-on' || radioSelected.classList.value !== 'button-on') {
       for (let radioSelected of radioBtns) {
         radioSelected.classList.remove('button-on');
       }
       radioSelected.classList.add('button-on');
     } else {
-      false
+      false;
     }
   });
 });
+
+const dotsChange = (selected) => {
+  let dotId = selected.id;
+  switch(dotId) {
+    case 'dot1':
+      sliderImg.src = `${imgItems[0]}`;
+      break;
+    case 'dot2':
+      sliderImg.src = `${imgItems[1]}`;  
+      break;
+    case 'dot3':
+      sliderImg.src = `${imgItems[2]}`;  
+      break;
+    case 'dot4':
+      sliderImg.src = `${imgItems[3]}`;  
+      break;
+    case 'dot5':
+      sliderImg.src = `${imgItems[4]}`;  
+      break;
+    default:
+      sliderImg.src = `${imgItems[slideImg[1]]}`;  
+  }
+}
 
 nextSlide();
 btnHeaderNextSlide.addEventListener('click', nextSlide);
