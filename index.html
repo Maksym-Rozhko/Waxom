@@ -14,7 +14,7 @@
         Waxom
     </title>
 </head>
-<body>
+<body id="body">
     <div class="header-inner">
         <a href="#home" class="navigation-link logo">
             <img src="./css/img/Logo/Logo-waxom.png" alt="Logo Waxom">
@@ -152,19 +152,24 @@
                 Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
             </p>
             <div class="buttons-container">
-                <button type="button" class="btn-item btn-item-active">All</button>
-                <button type="button" class="btn-item">Web design</button>
-                <button type="button" class="btn-item">Mobile app</button>
-                <button type="button" class="btn-item">Illustration</button>
-                <button type="button" class="btn-item">Photography</button>
+                <button id="all" type="button" class="btn-item btn-item--active">All</button>
+                <button id="web" type="button" class="btn-item">Web design</button>
+                <button id="mobile" type="button" class="btn-item">Mobile app</button>
+                <button id="illustration" type="button" class="btn-item">Illustration</button>
+                <button id="photography" type="button" class="btn-item">Photography</button>
             </div>
             <div class="project-cards">
-                <div class="card-items">
+                <div class="modal-card">
+                    <div class="modal-wrapp">
+                        <img src="" alt="modal-img" class="modal-img">
+                    </div>
+                </div>
+                <div data-id="mobile" class="card-items">
                     <div class="item-photo">
                         <img src="./css/img/features/f1.png" alt="one of the projects">
                         <div class="item-effect">
                            <div class="link-tools">
-                                <a href="#" target="_blank" class="link-items lupa"></a>
+                                <a href="#" class="link-items lupa"></a>
                                 <a href="#" target="_blank" class="link-items chain"></a>
                            </div>
                         </div>
@@ -178,12 +183,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="card-items">
+                <div data-id="web" class="card-items">
                     <div class="item-photo">
                         <img src="./css/img/features/f2.png" alt="one of the projects">
                         <div class="item-effect">
                            <div class="link-tools">
-                                <a href="#" target="_blank" class="link-items lupa"></a>
+                                <a href="#" class="link-items lupa"></a>
                                 <a href="#" target="_blank" class="link-items chain"></a>
                            </div>
                         </div>
@@ -197,12 +202,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="card-items">
+                <div data-id="mobile" class="card-items">
                     <div class="item-photo">
                         <img src="./css/img/features/f3.png" alt="one of the projects">
                         <div class="item-effect">
                            <div class="link-tools">
-                                <a href="#" target="_blank" class="link-items lupa"></a>
+                                <a href="#" class="link-items lupa"></a>
                                 <a href="#" target="_blank" class="link-items chain"></a>
                            </div>
                         </div>
@@ -216,12 +221,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="card-items">
+                <div data-id="illustration" class="card-items">
                     <div class="item-photo">
                         <img src="./css/img/features/f4.png" alt="one of the projects">
                         <div class="item-effect">
                            <div class="link-tools">
-                                <a href="#" target="_blank" class="link-items lupa"></a>
+                                <a href="#" class="link-items lupa"></a>
                                 <a href="#" target="_blank" class="link-items chain"></a>
                            </div>
                         </div>
@@ -235,12 +240,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="card-items">
+                <div data-id="photography" class="card-items">
                     <div class="item-photo">
                         <img src="./css/img/features/f5.png" alt="one of the projects">
                         <div class="item-effect">
                            <div class="link-tools">
-                                <a href="#" target="_blank" class="link-items lupa"></a>
+                                <a href="#" class="link-items lupa"></a>
                                 <a href="#" target="_blank" class="link-items chain"></a>
                            </div>
                         </div>
@@ -254,12 +259,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="card-items">
+                <div data-id="web" class="card-items">
                     <div class="item-photo">
                         <img src="./css/img/features/f6.png" alt="one of the projects">
                         <div class="item-effect">
                            <div class="link-tools">
-                                <a href="#" target="_blank" class="link-items lupa"></a>
+                                <a href="#" class="link-items lupa"></a>
                                 <a href="#" target="_blank" class="link-items chain"></a>
                            </div>
                         </div>

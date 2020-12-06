@@ -18,6 +18,10 @@ for (let anchor of anchors) {
     if (anchor.classList.value === 'nav-link--active' || anchor.classList.value !== 'nav-link--active') {
       for (let anchor of anchors) {
         anchor.classList.remove('nav-link--active');
+        sectionProjects.classList.remove('overflow');
+        modalCard.classList.remove('modal-card--active');
+        modalImg.classList.remove('modal-img--active');
+        body.classList.remove('hidden');
       }
       anchor.classList.add('nav-link--active');
     } else {
@@ -132,3 +136,112 @@ const dotsChange = (selected) => {
 nextSlide();
 btnHeaderNextSlide.addEventListener('click', nextSlide);
 btnHeaderPrevSlide.addEventListener('click', prevSlide);
+
+// Card projects card
+const cardBtns = document.querySelectorAll('.btn-item');
+const allCards = document.querySelectorAll('.card-items');
+
+for (let allBtns of cardBtns) {
+  allBtns.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (allBtns.classList.value === 'btn-item--active' || allBtns.classList.value !== 'btn-item--active') {
+      for (let allBtns of cardBtns) {
+        allBtns.classList.remove('btn-item--active');
+      }
+      allBtns.classList.add('btn-item--active');
+      showCards(allBtns);
+    } else {
+      false;
+    }
+  });
+}
+
+const showCards = (allBtns) => {
+  let btnId = allBtns.id;
+  for (let card of allCards) {
+    let cardId = card.getAttribute('data-id');
+    switch(btnId) {
+      case 'all': 
+        card.classList.remove('card-items--hidden');
+        break;
+      case 'web': 
+      card.classList.remove('card-items--hidden');
+        if(cardId !== 'web') {
+          card.classList.add('card-items--hidden');
+        }
+        break;
+      case 'mobile': 
+      card.classList.remove('card-items--hidden');
+        if(cardId !== 'mobile') {
+          card.classList.add('card-items--hidden');
+        }
+        break;
+      case 'illustration': 
+      card.classList.remove('card-items--hidden');
+        if(cardId !== 'illustration') {
+          card.classList.add('card-items--hidden');
+        }
+        break;
+      case 'photography': 
+      card.classList.remove('card-items--hidden');
+        if(cardId !== 'photography') {
+          card.classList.add('card-items--hidden');
+        }
+        break;
+      default: 
+        card.classList.remove('card-items--hidden');
+    }
+  }
+}
+
+// scale lupa open 
+const sectionProjects = document.querySelector('.projects');
+const modalCard = document.querySelector('.modal-card');
+const modalImg = document.querySelector('.modal-img');
+const lupaElem = document.querySelectorAll('.lupa');
+const body = document.querySelector('#body');
+
+const projectsImg = [
+  './css/img/features/f1.png',
+  './css/img/features/f2.png',
+  './css/img/features/f3.png',
+  './css/img/features/f4.png',
+  './css/img/features/f5.png',
+  './css/img/features/f6.png',
+];
+
+let selectedImg = 0;
+
+const scaleAnimationCard = (i) => {
+  selectedImg = i;
+  sectionProjects.classList.add('overflow');
+  modalCard.classList.add('modal-card--active');
+  modalImg.src = `${projectsImg[selectedImg]}`;
+  modalImg.classList.add('modal-img--active');
+  body.classList.add('hidden');
+}
+
+lupaElem.forEach((lupa, i) => {
+  lupa.addEventListener('click', (e) => {
+    e.preventDefault();
+    scaleAnimationCard(i);
+  });
+});
+
+modalCard.addEventListener('click', (e) => {
+  e.preventDefault();
+  sectionProjects.classList.remove('overflow');
+  modalCard.classList.remove('modal-card--active');
+  modalImg.classList.remove('modal-img--active');
+  body.classList.remove('hidden');
+});
+
+sectionProjects.addEventListener('click', (e) => {
+  target = e.target;
+  if (target === sectionProjects || target === modalCard) {
+    sectionProjects.classList.remove('overflow');
+    modalCard.classList.remove('modal-card--active');
+    modalImg.classList.remove('modal-img--active');
+    body.classList.remove('hidden');
+  }
+});

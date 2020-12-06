@@ -9,6 +9,10 @@ body {
   font-family: 'Montserrat', 'Raleway', sans-serif;
 }
 
+#body.hidden {
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1230px;
   width: 90%;
@@ -602,9 +606,10 @@ body {
   border-radius: 3px;
   border: 1px solid #ebebeb;
   transition: 0.5s;
+  outline: none;
 }
 
-.btn-item-active {
+.btn-item--active {
   background-color: #998675;
   color: #fff;
 }
@@ -624,12 +629,20 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  position: relative;
 }
 
 .card-items {
   position: relative;
   margin-bottom: 30px;
   cursor: pointer;
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+.card-items--hidden {
+  opacity: 0;
+  transition-duration: 2s;
 }
 
 .item-photo {
@@ -744,6 +757,25 @@ body {
 
 .button-link {
   margin-bottom: 0;
+}
+
+.modal-card {
+  opacity: 0;
+  position: absolute;
+}
+
+.modal-card--active {
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: 1s;
+  z-index: 1111111;
+}
+
+.modal-img--active {
+  transition-duration: 1s;
+  transform: rotate(360deg) scale(1.8);
 }
 
 /* Стили для 'Video-box' */
