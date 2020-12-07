@@ -195,12 +195,6 @@ const showCards = (allBtns) => {
 }
 
 // scale lupa open 
-const sectionProjects = document.querySelector('.projects');
-const modalCard = document.querySelector('.modal-card');
-const modalImg = document.querySelector('.modal-img');
-const lupaElem = document.querySelectorAll('.lupa');
-const body = document.querySelector('#body');
-
 const projectsImg = [
   './css/img/features/f1.png',
   './css/img/features/f2.png',
@@ -209,6 +203,12 @@ const projectsImg = [
   './css/img/features/f5.png',
   './css/img/features/f6.png',
 ];
+
+const sectionProjects = document.querySelector('.projects');
+const modalCard = document.querySelector('.modal-card');
+const modalImg = document.querySelector('.modal-img');
+const lupaElem = document.querySelectorAll('.lupa');
+const body = document.querySelector('#body');
 
 let selectedImg = 0;
 
@@ -243,5 +243,83 @@ sectionProjects.addEventListener('click', (e) => {
     modalCard.classList.remove('modal-card--active');
     modalImg.classList.remove('modal-img--active');
     body.classList.remove('hidden');
+  }
+});
+
+// video presentation play
+const videoPlay = document.querySelector('.btn-icon-play');
+const videoOpen = document.querySelector('.video-overlay');
+const videoClose = document.querySelector('.video-close');
+const videoPlayer = document.querySelector('.video-player');
+
+videoPlay.addEventListener('click', (e) => {
+  e.preventDefault();
+  videoOpen.classList.add('video-overlay--active');
+  videoPlayer.play();
+});
+
+videoClose.addEventListener('click', (e) => {
+  e.preventDefault();
+  videoOpen.classList.remove('video-overlay--active');
+  videoPlayer.pause();
+  videoPlayer.currentTime = 0;
+});
+
+// progress counter for numbers when scrolling.
+const counter = document.querySelectorAll('.counter');
+const counterNumbers = (() => {
+  let limit = 0; 
+  window.addEventListener('scroll', () => {  
+    if ( limit === counter.length ) return;
+
+    for(let i = 0; i < counter.length; i++) {
+      let pos = counter[i].getBoundingClientRect().top; 
+      let win = window.innerHeight - 40; 
+      if ( pos < win && counter[i].dataset.stop === '0' ) {
+        counter[i].dataset.stop = 1; 
+        let x = 0;
+        limit++; 
+        let int = setInterval(() => {
+          x = x + Math.ceil( counter[i].dataset.to / 50 ); 
+          counter[i].innerText = x;
+          if( x > counter[i].dataset.to ) {
+            counter[i].innerText = counter[i].dataset.to;
+            clearInterval(int);
+          }
+        }, 60);
+      }
+    }
+  });
+})();
+
+// carousel 
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 3,
+  spaceBetween: 60,
+  slidesPerGroup: 3,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  navigation: {
+    nextEl: '.right-posts',
+    prevEl: '.left-posts',
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    200: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    // when window width is >= 480px
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+    },
+    // when window width is >= 640px
+    1200: {
+      slidesPerView: 3,
+      slidesPerGroup: 60,
+      slidesPerGroup: 3,
+    }
   }
 });

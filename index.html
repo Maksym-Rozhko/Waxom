@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="./css/img/Logo/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/normolize.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/app.js" defer></script>
@@ -295,7 +296,7 @@
                 Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.
             </p>
             <span class="video-time">
-                03:26
+                03:10
             </span>
             <div class="video-overlay">
                 <video class="video-player" src="./css/video/videoplayback.mp4" controls></video>
@@ -331,23 +332,23 @@
         <div class="wrapper">
             <div class="info-wrapp">
                 <div class="informations">
-                    <span class="counter">3587</span>
+                    <span class="counter" data-to="3587" data-stop="0">0</span>
                     <span class="indicators-name i-icon i-clients">Satisfied Clients</span>
                 </div>
                 <div class="informations">
-                    <span class="counter">207</span>
+                    <span class="counter" data-to="207" data-stop="0">0</span>
                     <span class="indicators-name i-icon i-cups">Cups of coffee</span>
                 </div>
                 <div class="informations">
-                    <span class="counter">2500</span>
+                    <span class="counter" data-to="2500" data-stop="0">0</span>
                     <span class="indicators-name i-icon i-blog">Blog posts</span>
                 </div>
                 <div class="informations">
-                    <span class="counter">873</span>
+                    <span class="counter" data-to="873" data-stop="0">0</span>
                     <span class="indicators-name i-icon i-likes">Likes</span>
                 </div>
                 <div class="informations">
-                    <span class="counter">900</span>
+                    <span class="counter" data-to="900" data-stop="0">0</span>
                     <span class="indicators-name i-icon i-launch">We launched</span>
                 </div>
             </div>
@@ -363,154 +364,468 @@
                     Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
                 </p>
             </div>
-            <div class="big-box">
-                <div class="posts-box"><!-- Posts One Start -->
-                    <div class="img-post">
-                        <div class="container-date">
-                            <div class="day">
-                                <span class="posts-day">
-                                    30
-                                </span>
+            <div class="big-box swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="posts-box"><!-- Posts One Start -->
+                        <div class="img-post">
+                            <div class="container-date">
+                                <div class="day">
+                                    <span class="posts-day">
+                                        30
+                                    </span>
+                                </div>
+                                <div class="month">
+                                    <span class="posts-month">
+                                        Sep.
+                                    </span>
+                                </div>
                             </div>
-                            <div class="month">
-                                <span class="posts-month">
-                                    Sep.
-                                </span>
-                            </div>
-                        </div>
-                        <img src="./css/img/posts/photo-post1.png" alt="post one">
-                        <div class="img-post-shadow"></div>
-                        <div class="radio-wrapper radio-wr-inner">
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio1f" name="radiof">
-                                <label class="radio-label inner-label" for="radio1f"></label>
-                            </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio2f" name="radiof" checked>
-                                <label class="radio-label inner-label" for="radio2f"></label>
-                            </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio3f" name="radiof">
-                                <label class="radio-label inner-label" for="radio3f"></label>
-                            </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio4f" name="radiof">
-                                <label class="radio-label inner-label" for="radio4f"></label>
-                            </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio5f" name="radiof">
-                                <label class="radio-label inner-label" for="radio5f"></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post-text">
-                        <h4 class="post-title">
-                            Lorem ipsum dolor sit amet
-                        </h4>
-                        <p class="post-subtitle">
-                            Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
-                        </p>
-                        <a href="#" target="_blank" class="post-link">Read more</a>
-                    </div>
-                </div><!-- Posts One End -->
-                <div class="posts-box"><!-- Posts Two Start -->
-                    <div class="img-post">
-                        <div class="container-date">
-                            <div class="day">
-                                <span class="posts-day">
-                                    30
-                                </span>
-                            </div>
-                            <div class="month">
-                                <span class="posts-month">
-                                    Sep.
-                                </span>
+                            <img src="./css/img/posts/photo-post1.png" alt="post one">
+                            <div class="img-post-shadow"></div>
+                            <div class="radio-wrapper radio-wr-inner">
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio1f" name="radiof" checked>
+                                    <label class="radio-label inner-label" for="radio1f"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio2f" name="radiof">
+                                    <label class="radio-label inner-label" for="radio2f"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio3f" name="radiof">
+                                    <label class="radio-label inner-label" for="radio3f"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio4f" name="radiof">
+                                    <label class="radio-label inner-label" for="radio4f"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio5f" name="radiof">
+                                    <label class="radio-label inner-label" for="radio5f"></label>
+                                </div>
                             </div>
                         </div>
-                        <img src="./css/img/posts/photo-post2.png" alt="post two">
-                        <div class="img-post-shadow"></div>
-                        <div class="radio-wrapper radio-wr-inner">
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio1t" name="radiot">
-                                <label class="radio-label inner-label" for="radio1t"></label>
+                        <div class="post-text">
+                            <h4 class="post-title">
+                                Lorem ipsum dolor sit amet
+                            </h4>
+                            <p class="post-subtitle">
+                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                            </p>
+                            <a href="#" target="_blank" class="post-link">Read more</a>
+                        </div>
+                    </div><!-- Posts One End -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="posts-box"><!-- Posts Two Start -->
+                        <div class="img-post">
+                            <div class="container-date">
+                                <div class="day">
+                                    <span class="posts-day">
+                                        30
+                                    </span>
+                                </div>
+                                <div class="month">
+                                    <span class="posts-month">
+                                        Sep.
+                                    </span>
+                                </div>
                             </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio2t" name="radiot" checked>
-                                <label class="radio-label inner-label" for="radio2t"></label>
-                            </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio3t" name="radiot">
-                                <label class="radio-label inner-label" for="radio3t"></label>
-                            </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio4t" name="radiot">
-                                <label class="radio-label inner-label" for="radio4t"></label>
-                            </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio5t" name="radiot">
-                                <label class="radio-label inner-label" for="radio5t"></label>
+                            <img src="./css/img/posts/photo-post2.png" alt="post two">
+                            <div class="img-post-shadow"></div>
+                            <div class="radio-wrapper radio-wr-inner">
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio1t" name="radiot" checked>
+                                    <label class="radio-label inner-label" for="radio1t"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio2t" name="radiot">
+                                    <label class="radio-label inner-label" for="radio2t"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio3t" name="radiot">
+                                    <label class="radio-label inner-label" for="radio3t"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio4t" name="radiot">
+                                    <label class="radio-label inner-label" for="radio4t"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio5t" name="radiot">
+                                    <label class="radio-label inner-label" for="radio5t"></label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="post-text">
-                        <h4 class="post-title">
-                            Lorem ipsum dolor sit amet
-                        </h4>
-                        <p class="post-subtitle">
-                            Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
-                        </p>
-                        <a href="#" target="_blank" class="post-link">Read more</a>
-                    </div>
-                </div><!-- Posts Two End -->
-                <div class="posts-box"><!-- Posts Three Start -->
-                    <div class="img-post">
-                        <div class="container-date">
-                            <div class="day">
-                                <span class="posts-day">
-                                    30
-                                </span>
+                        <div class="post-text">
+                            <h4 class="post-title">
+                                Lorem ipsum dolor sit amet
+                            </h4>
+                            <p class="post-subtitle">
+                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                            </p>
+                            <a href="#" target="_blank" class="post-link">Read more</a>
+                        </div>
+                    </div><!-- Posts Two End -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="posts-box"><!-- Posts Three Start -->
+                        <div class="img-post">
+                            <div class="container-date">
+                                <div class="day">
+                                    <span class="posts-day">
+                                        30
+                                    </span>
+                                </div>
+                                <div class="month">
+                                    <span class="posts-month">
+                                        Sep.
+                                    </span>
+                                </div>
                             </div>
-                            <div class="month">
-                                <span class="posts-month">
-                                    Sep.
-                                </span>
+                            <img src="./css/img/posts/photo-post3.png" alt="post three">
+                            <div class="img-post-shadow"></div>
+                            <div class="radio-wrapper radio-wr-inner">
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio1i" name="radioi" checked>
+                                    <label class="radio-label inner-label" for="radio1i"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio2i" name="radioi">
+                                    <label class="radio-label inner-label" for="radio2i"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio3i" name="radioi">
+                                    <label class="radio-label inner-label" for="radio3i"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio4i" name="radioi">
+                                    <label class="radio-label inner-label" for="radio4i"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio5i" name="radioi">
+                                    <label class="radio-label inner-label" for="radio5i"></label>
+                                </div>
                             </div>
                         </div>
-                        <img src="./css/img/posts/photo-post3.png" alt="post three">
-                        <div class="img-post-shadow"></div>
-                        <div class="radio-wrapper radio-wr-inner">
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio1i" name="radioi">
-                                <label class="radio-label inner-label" for="radio1i"></label>
+                        <div class="post-text">
+                            <h4 class="post-title">
+                                Lorem ipsum dolor sit amet
+                            </h4>
+                            <p class="post-subtitle">
+                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                            </p>
+                            <a href="#" target="_blank" class="post-link">Read more</a>
+                        </div>
+                    </div><!-- Posts Three End -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="posts-box"><!-- Posts One Start -->
+                        <div class="img-post">
+                            <div class="container-date">
+                                <div class="day">
+                                    <span class="posts-day">
+                                        30
+                                    </span>
+                                </div>
+                                <div class="month">
+                                    <span class="posts-month">
+                                        Sep.
+                                    </span>
+                                </div>
                             </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio2i" name="radioi" checked>
-                                <label class="radio-label inner-label" for="radio2i"></label>
-                            </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio3i" name="radioi">
-                                <label class="radio-label inner-label" for="radio3i"></label>
-                            </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio4i" name="radioi">
-                                <label class="radio-label inner-label" for="radio4i"></label>
-                            </div>
-                            <div class="radio">
-                                <input class="radio-input" type="radio" id="radio5i" name="radioi">
-                                <label class="radio-label inner-label" for="radio5i"></label>
+                            <img src="./css/img/features/f6.png" alt="post one">
+                            <div class="img-post-shadow"></div>
+                            <div class="radio-wrapper radio-wr-inner">
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio1ff" name="radioff">
+                                    <label class="radio-label inner-label" for="radio1ff"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio2ff" name="radioff">
+                                    <label class="radio-label inner-label" for="radio2ff"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio3ff" name="radioff">
+                                    <label class="radio-label inner-label" for="radio3ff"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio4ff" name="radioff" checked>
+                                    <label class="radio-label inner-label" for="radio4f"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio5ff" name="radioff">
+                                    <label class="radio-label inner-label" for="radio5ff"></label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="post-text">
-                        <h4 class="post-title">
-                            Lorem ipsum dolor sit amet
-                        </h4>
-                        <p class="post-subtitle">
-                            Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
-                        </p>
-                        <a href="#" target="_blank" class="post-link">Read more</a>
-                    </div>
-                </div><!-- Posts Three End -->
+                        <div class="post-text">
+                            <h4 class="post-title">
+                                Lorem ipsum dolor sit amet
+                            </h4>
+                            <p class="post-subtitle">
+                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                            </p>
+                            <a href="#" target="_blank" class="post-link">Read more</a>
+                        </div>
+                    </div><!-- Posts One End -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="posts-box"><!-- Posts Two Start -->
+                        <div class="img-post">
+                            <div class="container-date">
+                                <div class="day">
+                                    <span class="posts-day">
+                                        30
+                                    </span>
+                                </div>
+                                <div class="month">
+                                    <span class="posts-month">
+                                        Sep.
+                                    </span>
+                                </div>
+                            </div>
+                            <img src="./css/img/features/f2.png" alt="post two">
+                            <div class="img-post-shadow"></div>
+                            <div class="radio-wrapper radio-wr-inner">
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio1tt" name="radiott">
+                                    <label class="radio-label inner-label" for="radio1tt"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio2tt" name="radiott">
+                                    <label class="radio-label inner-label" for="radio2tt"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio3tt" name="radiott">
+                                    <label class="radio-label inner-label" for="radio3tt"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio4tt" name="radiott" checked>
+                                    <label class="radio-label inner-label" for="radio4tt"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio5tt" name="radiott">
+                                    <label class="radio-label inner-label" for="radio5tt"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-text">
+                            <h4 class="post-title">
+                                Lorem ipsum dolor sit amet
+                            </h4>
+                            <p class="post-subtitle">
+                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                            </p>
+                            <a href="#" target="_blank" class="post-link">Read more</a>
+                        </div>
+                    </div><!-- Posts Two End -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="posts-box"><!-- Posts Three Start -->
+                        <div class="img-post">
+                            <div class="container-date">
+                                <div class="day">
+                                    <span class="posts-day">
+                                        30
+                                    </span>
+                                </div>
+                                <div class="month">
+                                    <span class="posts-month">
+                                        Sep.
+                                    </span>
+                                </div>
+                            </div>
+                            <img src="./css/img/features/f4.png" alt="post three">
+                            <div class="img-post-shadow"></div>
+                            <div class="radio-wrapper radio-wr-inner">
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio1ii" name="radioii">
+                                    <label class="radio-label inner-label" for="radio1i"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio2ii" name="radioii">
+                                    <label class="radio-label inner-label" for="radio2ii"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio3ii" name="radioii">
+                                    <label class="radio-label inner-label" for="radio3ii"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio4ii" name="radioii" checked>
+                                    <label class="radio-label inner-label" for="radio4ii"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio5ii" name="radioii">
+                                    <label class="radio-label inner-label" for="radio5ii"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-text">
+                            <h4 class="post-title">
+                                Lorem ipsum dolor sit amet
+                            </h4>
+                            <p class="post-subtitle">
+                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                            </p>
+                            <a href="#" target="_blank" class="post-link">Read more</a>
+                        </div>
+                    </div><!-- Posts Three End -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="posts-box"><!-- Posts One Start -->
+                        <div class="img-post">
+                            <div class="container-date">
+                                <div class="day">
+                                    <span class="posts-day">
+                                        30
+                                    </span>
+                                </div>
+                                <div class="month">
+                                    <span class="posts-month">
+                                        Sep.
+                                    </span>
+                                </div>
+                            </div>
+                            <img src="./css/img/features/f4.png" alt="post one">
+                            <div class="img-post-shadow"></div>
+                            <div class="radio-wrapper radio-wr-inner">
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio1f" name="radiof">
+                                    <label class="radio-label inner-label" for="radio1f"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio2f" name="radiof">
+                                    <label class="radio-label inner-label" for="radio2f"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio3f" name="radiof" checked>
+                                    <label class="radio-label inner-label" for="radio3f"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio4f" name="radiof">
+                                    <label class="radio-label inner-label" for="radio4f"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio5f" name="radiof">
+                                    <label class="radio-label inner-label" for="radio5f"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-text">
+                            <h4 class="post-title">
+                                Lorem ipsum dolor sit amet
+                            </h4>
+                            <p class="post-subtitle">
+                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                            </p>
+                            <a href="#" target="_blank" class="post-link">Read more</a>
+                        </div>
+                    </div><!-- Posts One End -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="posts-box"><!-- Posts Two Start -->
+                        <div class="img-post">
+                            <div class="container-date">
+                                <div class="day">
+                                    <span class="posts-day">
+                                        30
+                                    </span>
+                                </div>
+                                <div class="month">
+                                    <span class="posts-month">
+                                        Sep.
+                                    </span>
+                                </div>
+                            </div>
+                            <img src="./css/img/features/f5.png" alt="post two">
+                            <div class="img-post-shadow"></div>
+                            <div class="radio-wrapper radio-wr-inner">
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio1t" name="radiot">
+                                    <label class="radio-label inner-label" for="radio1t"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio2t" name="radiot">
+                                    <label class="radio-label inner-label" for="radio2t"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio3t" name="radiot" checked>
+                                    <label class="radio-label inner-label" for="radio3t"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio4t" name="radiot">
+                                    <label class="radio-label inner-label" for="radio4t"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio5t" name="radiot">
+                                    <label class="radio-label inner-label" for="radio5t"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-text">
+                            <h4 class="post-title">
+                                Lorem ipsum dolor sit amet
+                            </h4>
+                            <p class="post-subtitle">
+                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                            </p>
+                            <a href="#" target="_blank" class="post-link">Read more</a>
+                        </div>
+                    </div><!-- Posts Two End -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="posts-box"><!-- Posts Three Start -->
+                        <div class="img-post">
+                            <div class="container-date">
+                                <div class="day">
+                                    <span class="posts-day">
+                                        30
+                                    </span>
+                                </div>
+                                <div class="month">
+                                    <span class="posts-month">
+                                        Sep.
+                                    </span>
+                                </div>
+                            </div>
+                            <img src="./css/img/features/f6.png" alt="post three">
+                            <div class="img-post-shadow"></div>
+                            <div class="radio-wrapper radio-wr-inner">
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio1i" name="radioi">
+                                    <label class="radio-label inner-label" for="radio1iii"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio2i" name="radioi">
+                                    <label class="radio-label inner-label" for="radio2i"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio3i" name="radioi" checked>
+                                    <label class="radio-label inner-label" for="radio3i"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio4i" name="radioi">
+                                    <label class="radio-label inner-label" for="radio4i"></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="radio-input" type="radio" id="radio5i" name="radioi">
+                                    <label class="radio-label inner-label" for="radio5i"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-text">
+                            <h4 class="post-title">
+                                Lorem ipsum dolor sit amet
+                            </h4>
+                            <p class="post-subtitle">
+                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                            </p>
+                            <a href="#" target="_blank" class="post-link">Read more</a>
+                        </div>
+                    </div><!-- Posts Three End -->
+                  </div>
+                </div>
             </div>
             <div class="button-position">
                 <button type="button" class="btn-posts left-posts"></button>
@@ -658,6 +973,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
 

@@ -274,8 +274,20 @@ body {
   opacity: 1;
 }
 
+#radio1f + .radio-label::before,
+#radio1t + .radio-label::before,
+#radio1i + .radio-label::before {
+  opacity: 1;
+}
+
 .radio-input:checked + .radio-label::after {
-  opacity: -1;
+  opacity: 0;
+}
+
+#radio1f + .radio-label::after,
+#radio1t + .radio-label::after,
+#radio1i + .radio-label::after {
+  opacity: 0;
 }
 
 .radio-off {
@@ -877,6 +889,10 @@ body {
   z-index: 1000;
 }
 
+.video-overlay--active {
+  display: block;
+}
+
 .video-player {
   position: relative;
   top: 50%;
@@ -1112,6 +1128,7 @@ body {
 
 .posts-box {
   transition: 1s;
+  padding-bottom: 1px;
 }
 
 .img-post {
@@ -1120,6 +1137,13 @@ body {
   max-width: 370px;
   width: 100%;
   cursor: pointer;
+}
+
+.img-post img {
+  max-height: 220px;
+  max-width: 370px;
+  width: 100%;
+
 }
 
 .container-date {
@@ -1135,6 +1159,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+  min-height: 92%;
   height: 220px;
   background-color: rgba(17, 17, 17, 0.7);
   display: none;
@@ -1548,8 +1573,12 @@ body {
     max-width: 700px;
   }
 
-  .posts-box:last-child {
-    display: none;
+  .big-box {
+    max-width: 900px;
+  }
+
+  .posts-box {
+    max-width: 370px;
   }
 }
 
@@ -1599,10 +1628,6 @@ body {
 
   .devices-text {
     text-align: center;
-  }
-
-  .posts-box:first-child {
-    display: none;
   }
 }
 
@@ -1716,6 +1741,20 @@ body {
 
   .logo {
     margin-bottom: 0;
+  }
+
+  .img-post-shadow {
+    height: 190px;
+  }
+}
+
+@media (max-width: 760px) {
+  .big-box {
+    max-width: 320px;
+  }
+
+  .post-text {
+    width: 80%;
   }
 }
 
