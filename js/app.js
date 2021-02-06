@@ -1,5 +1,5 @@
 // smooth scrolling by anchors
-const headerBlock = document.querySelector('.header');  
+const headerBlock = document.querySelector('.header');
 const sectionElem = document.getElementsByTagName('section');
 const overflowFoter = document.querySelector('.footer');
 const navMenu = document.querySelector('.navigation');
